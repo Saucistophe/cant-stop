@@ -9,8 +9,8 @@ import ast
 app = FastAPI()
 
 class Move(BaseModel):
-    row: int
-    count: int
+    combination: list[int] = Field(default_factory=list)
+    player_name: str = Field(default_factory=str)
 
 def get_chunks(lst, n):
     return [lst[i:i + n] for i in range(0, len(lst) - len(lst) % n, n)]
@@ -86,14 +86,12 @@ class Game(BaseModel):
     def roll_dice(self):
         self.current_dice = [randrange(1, d + 1) for d in self.dice]
 
-    def apply_move(self, row: int, count: int):
-        if row not in self.rows:
-            raise ValueError("Invalid row")
+    def apply_move(self, move: Move):
+        if move.player_name != self.current_player:
+            raise ValueError(f"It's not {move.player_name}'s turn")
+        if sorted(move.combination) not in self.get_combinations:
+            raise ValueError(f"Combination {move.combination} not allowed")
 
-        if count <= 0 or count > self.rows[row]:
-            raise ValueError("Invalid count")
-
-        self.rows[row] -= count
 
         # Switch turn
         self.current_player_idx = (self.current_player_idx + 1) % len(self.players)
@@ -111,7 +109,7 @@ def get_game():
 @app.post("/move")
 def post_move(move: Move):
     try:
-        game.apply_move(move.row, move.count)
+        game.apply_move(move)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
