@@ -32,7 +32,7 @@ class Game(BaseModel):
 
     @computed_field(return_type=list[list[int]])
     @property
-    def get_combinations(self):
+    def combinations(self):
         all_permutations = list(set(permutations(self.current_dice)))
         all_chunks = [get_chunks(p, self.allowed_dice_merge) for p in all_permutations]
 
@@ -89,8 +89,9 @@ class Game(BaseModel):
     def apply_move(self, move: Move):
         if move.player_name != self.current_player:
             raise ValueError(f"It's not {move.player_name}'s turn")
-        if sorted(move.combination) not in self.get_combinations:
+        if sorted(move.combination) not in self.combinations:
             raise ValueError(f"Combination {move.combination} not allowed")
+
 
 
         # Switch turn
