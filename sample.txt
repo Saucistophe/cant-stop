@@ -1,0 +1,16 @@
+dice: [6,6,6,6]
+allowed_dice_merge: 2
+players: ['Hugo','Steeven','Christophe']
+current_player: None
+
+2  XXX
+3  XXXXX
+4  XXXXXXX
+5  XXXXXXXXX
+6  XXXXXXXXXXX
+7  XXXXXXXXXXXXX
+8  XXXXXXXXXXX
+9  XXXXXXXXX
+10 XXXXXXX
+11 XXXXX
+12 XXX
