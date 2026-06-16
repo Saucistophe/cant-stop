@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26fa4156-d6e8-4e3d-a329-58c0061de49f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="9" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.9968313793120796E-4" />
+      <entry key="MS500" value="0.18998728239775453" />
+      <entry key="S2" value="1.1266770172724097" />
+      <entry key="S5" value="2.1956738998304464" />
+      <entry key="S10" value="3.1058808031031697" />
+      <entry key="S30" value="4.193540000113253" />
+      <entry key="S60" value="4.571942251660333" />
+      <entry key="M2" value="5.1544313830415485" />
+      <entry key="M5" value="12.24316792583566" />
+      <entry key="M10" value="28.61188473235506" />
+      <entry key="M15" value="43.94396618827449" />
+      <entry key="M30" value="82.37809033684107" />
+      <entry key="H1" value="135.0906116544205" />
+      <entry key="H2" value="187.4591463649843" />
+      <entry key="H4" value="226.31067938913424" />
+      <entry key="D1" value="268.3024002501267" />
+      <entry key="W1" value="276.58516812191266" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.000000000009123" />
+      <entry key="S60" value="1.0000043419952858" />
+      <entry key="M2" value="1.0032918411234675" />
+      <entry key="M5" value="1.2225491963392416" />
+      <entry key="M10" value="2.0174636662853787" />
+      <entry key="M15" value="2.7751590327469797" />
+      <entry key="M30" value="4.79564917232626" />
+      <entry key="H1" value="8.149416560323198" />
+      <entry key="H2" value="11.92400248210245" />
+      <entry key="H4" value="14.895582301071633" />
+      <entry key="D1" value="18.21920930371396" />
+      <entry key="W1" value="18.88581013686868" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="7.058758621319337E-4" />
+      <entry key="MS500" value="0.32886488459596636" />
+      <entry key="S2" value="1.6571802527879602" />
+      <entry key="S5" value="2.906360469296727" />
+      <entry key="S10" value="3.9078256082465237" />
+      <entry key="S30" value="5.103508470833043" />
+      <entry key="S60" value="5.522561267595256" />
+      <entry key="M2" value="6.131532997051932" />
+      <entry key="M5" value="13.45046742720981" />
+      <entry key="M10" value="30.61512717945705" />
+      <entry key="M15" value="46.70567745973325" />
+      <entry key="M30" value="87.16130992965621" />
+      <entry key="H1" value="143.22873469702805" />
+      <entry key="H2" value="199.37460354475684" />
+      <entry key="H4" value="241.20084786830083" />
+      <entry key="D1" value="286.5204949444887" />
+      <entry key="W1" value="295.4708129550563" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Exet0QiuBWXr3IiJuSIaYkoZhP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests in test_get_combinations.py.executor": "Run",
+    "Python.server.executor": "Run",
+    "Python.uvicorn.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/christophe/dev/foutoir/cant_stop/.venv/bin/uvicorn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3643678",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.uvicorn">
+    <configuration name="uvicorn" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cant_stop" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.14 (cant_stop) (2)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/bin/uvicorn" />
+      <option name="PARAMETERS" value="server:app --reload" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_get_combinations.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="cant_stop" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_get_combinations.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_get_combinations.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26fa4156-d6e8-4e3d-a329-58c0061de49f" name="Changes" comment="" />
+      <created>1781124858974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781124858974</updated>
+      <workItem from="1781124860082" duration="551000" />
+      <workItem from="1781125416084" duration="18000" />
+      <workItem from="1781125434960" duration="659000" />
+      <workItem from="1781518926462" duration="11738000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
