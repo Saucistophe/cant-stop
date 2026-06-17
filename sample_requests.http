@@ -2,8 +2,8 @@
 GET http://localhost:8000/game
 
 > {%
-    client.global.set("player_name", response.body.current_player);
-    client.global.set("combination", JSON.stringify(response.body.combinations[0]));
+    client.global.set("player_name", response.body.current_player.name);
+    client.global.set("move", JSON.stringify(response.body.possible_moves[0]));
 %}
 
 ###

@@ -12,6 +12,11 @@ class Move(BaseModel):
     combination: list[int] = Field(default_factory=list)
     player_name: str = Field(default_factory=str)
 
+class Player(BaseModel):
+    name: str = Field(default_factory=str)
+    markers: dict[int, int] = Field(default_factory=dict)
+    hooks: dict[int, int] = Field(default_factory=dict)
+
 def get_chunks(lst, n):
     return [lst[i:i + n] for i in range(0, len(lst) - len(lst) % n, n)]
 
@@ -19,7 +24,7 @@ class Game(BaseModel):
     dice: list[int] = Field(default_factory=lambda: [6, 6, 6, 6])
     allowed_dice_merge: int = 2
     current_dice: list[int] = Field(default_factory=list)
-    players: list[str] = Field(default_factory=list)
+    players: list[Player] = Field(default_factory=list)
     rows: dict[int, int] = Field(default_factory=dict)
     current_player_idx: int = None
 
@@ -32,6 +37,10 @@ class Game(BaseModel):
 
     @computed_field(return_type=list[list[int]])
     @property
+    def possible_moves(self):
+        combinations = self.combinations()
+        return combinations
+
     def combinations(self):
         all_permutations = list(set(permutations(self.current_dice)))
         all_chunks = [get_chunks(p, self.allowed_dice_merge) for p in all_permutations]
@@ -58,7 +67,7 @@ class Game(BaseModel):
             elif line.startswith("current_dice:"):
                 self.current_dice = ast.literal_eval(line.split(":", 1)[1].strip())
             elif line.startswith("players:"):
-                self.players = ast.literal_eval(line.split(":", 1)[1].strip())
+                self.players = [Player(name=n) for n in ast.literal_eval(line.split(":", 1)[1].strip())]
             elif line.startswith("allowed_dice_merge:"):
                 self.allowed_dice_merge = int(line.split(":", 1)[1].strip())
 
