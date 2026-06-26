@@ -23,12 +23,13 @@ def get_chunks(lst, n):
 class Game(BaseModel):
     dice: list[int] = Field(default_factory=lambda: [6, 6, 6, 6])
     allowed_dice_merge: int = 2
+    max_markers: int = 3
     current_dice: list[int] = Field(default_factory=list)
     players: list[Player] = Field(default_factory=list)
     rows: dict[int, int] = Field(default_factory=dict)
     current_player_idx: int = None
 
-    @computed_field(return_type=str)
+    @computed_field(return_type=Player)
     @property
     def current_player(self):
         if self.current_player_idx is None or not self.players:
@@ -38,8 +39,23 @@ class Game(BaseModel):
     @computed_field(return_type=list[list[int]])
     @property
     def possible_moves(self):
+        candidate_moves = []
         combinations = self.combinations()
-        return combinations
+        for combination in combinations:
+            candidate_move = []
+            for v in combination:
+                if len(self.current_player.markers) >= self.max_markers and v not in self.current_player.markers.keys():
+                    continue
+                if any(p.hooks.get(v) == self.rows.get(v) for p in self.players if v in p.hooks):
+                    continue
+
+                candidate_move.append(v)
+
+            # zero left => bail out
+            if len(candidate_move) == 0:
+                continue
+            candidate_moves.append(candidate_move)
+        return candidate_moves
 
     def combinations(self):
         all_permutations = list(set(permutations(self.current_dice)))
@@ -70,6 +86,8 @@ class Game(BaseModel):
                 self.players = [Player(name=n) for n in ast.literal_eval(line.split(":", 1)[1].strip())]
             elif line.startswith("allowed_dice_merge:"):
                 self.allowed_dice_merge = int(line.split(":", 1)[1].strip())
+            elif line.startswith("max_markers:"):
+                self.max_markers = int(line.split(":", 1)[1].strip())
 
             elif line.startswith("current_player:"):
                 # current_player: None or name
