@@ -14,7 +14,7 @@ def test_possible_moves_filters_captured_rows():
     game.max_markers = 3
 
     moves = game.possible_moves
-    assert moves == [[6,8]], f"Expected [7, 7] to be filtered out, but got {moves}"
+    assert moves == [[6,8]]
 
 def test_possible_moves_returns_candidate_moves():
     game = Game()
