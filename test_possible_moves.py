@@ -3,7 +3,7 @@ from server import Game, Player
 
 def test_possible_moves_filters_captured_rows():
     game = Game()
-    # Player 0 has captured row 7 (hook value 6 equals row 7 length 6)
+    # Player 0 has captured row 7
     p0 = Player(name="p0", hooks={7: 6})
     p1 = Player(name="p1", markers={})
     game.players = [p0, p1]
@@ -13,11 +13,8 @@ def test_possible_moves_filters_captured_rows():
     game.allowed_dice_merge = 2
     game.max_markers = 3
 
-    # game.combinations() should return [[7, 7]]
-    # Since row 7 is captured, [7, 7] should be filtered out.
-
     moves = game.possible_moves
-    assert [7, 7] not in moves, f"Expected [7, 7] to be filtered out, but got {moves}"
+    assert moves == [[6,8]], f"Expected [7, 7] to be filtered out, but got {moves}"
 
 def test_possible_moves_returns_candidate_moves():
     game = Game()

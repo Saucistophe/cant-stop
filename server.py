@@ -8,6 +8,9 @@ import ast
 
 app = FastAPI()
 
+def get_chunks(lst, n):
+    return [lst[i:i + n] for i in range(0, len(lst) - len(lst) % n, n)]
+
 class Move(BaseModel):
     combination: list[int] = Field(default_factory=list)
     player_name: str = Field(default_factory=str)
@@ -16,9 +19,6 @@ class Player(BaseModel):
     name: str = Field(default_factory=str)
     markers: dict[int, int] = Field(default_factory=dict)
     hooks: dict[int, int] = Field(default_factory=dict)
-
-def get_chunks(lst, n):
-    return [lst[i:i + n] for i in range(0, len(lst) - len(lst) % n, n)]
 
 class Game(BaseModel):
     dice: list[int] = Field(default_factory=lambda: [6, 6, 6, 6])
@@ -118,8 +118,6 @@ class Game(BaseModel):
             raise ValueError(f"It's not {move.player_name}'s turn")
         if sorted(move.combination) not in self.combinations:
             raise ValueError(f"Combination {move.combination} not allowed")
-
-
 
         # Switch turn
         self.current_player_idx = (self.current_player_idx + 1) % len(self.players)

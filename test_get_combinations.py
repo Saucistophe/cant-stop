@@ -14,7 +14,7 @@ class TestGetCombinations(unittest.TestCase):
         game.allowed_dice_merge = 2
         
         # Execute the property under test
-        result = game.get_combinations
+        result = game.combinations()
         
         expected = [[3, 7], [4, 6], [5, 5]]
         
@@ -28,7 +28,7 @@ class TestGetCombinations(unittest.TestCase):
         game.current_dice = [1, 2, 3, 4]
         game.allowed_dice_merge = 1
         
-        result = game.get_combinations
+        result = game.combinations()
         expected = [[1, 2, 3, 4]]
         self.assertEqual(result, expected)
 
@@ -39,7 +39,7 @@ class TestGetCombinations(unittest.TestCase):
         game.current_dice = [1, 2, 3, 4]
         game.allowed_dice_merge = 4
         
-        result = game.get_combinations
+        result = game.combinations()
         expected = [[10]]
         self.assertEqual(result, expected)
 
